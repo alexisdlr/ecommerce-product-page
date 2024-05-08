@@ -11,6 +11,12 @@ const StyledHeader = styled.header`
   align-items: center;
   border-bottom: 2px solid #E4E9F2;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+ 
 `;
 const Logo = styled.img`
   width: 130px;
@@ -44,6 +50,9 @@ const MenuList = styled.ul`
   list-style: none;
   gap: 1.5rem;
   align-items: center;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 const Link = styled.a`
   text-decoration: none;

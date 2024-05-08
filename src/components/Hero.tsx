@@ -7,9 +7,16 @@ import Price from "./Price";
 const Container = styled(Wrapper)`
   max-width: 1100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 4rem 0;
+  gap: 0 4rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+  }
 `;
 
 const HeroText = styled.div`
@@ -20,6 +27,11 @@ const HeroText = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 4px;
+
+  @media (max-width: 768px) {
+    margin: 0;
+    text-align: left ;
+  }
 `;
 
 const Span = styled.span`

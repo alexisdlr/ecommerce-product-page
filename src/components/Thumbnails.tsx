@@ -1,9 +1,13 @@
-import { images } from "../images";
+import { images } from "../utils";
 import styled from "styled-components";
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Thumbnail = styled.img<{ isActive: boolean }>`

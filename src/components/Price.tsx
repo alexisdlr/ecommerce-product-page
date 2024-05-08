@@ -22,7 +22,8 @@ const Discount = styled.span`
   background-color: #FFEEE2;
   padding: 0.5rem;
   border-radius: 10px;
-  margin: 0;
+
+  margin: 0 0 0 1rem ;
 `;
 
 const Span = styled.span`

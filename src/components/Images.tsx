@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { images } from "../images";
+import { images } from "../utils";
 import Thumbnails from "./Thumbnails";
 import styled from "styled-components";
 
@@ -7,6 +7,10 @@ const HeroImage = styled.img`
   width: 400px;
   height: auto;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ContainerImages = styled.div`
@@ -22,6 +26,7 @@ const Images = () => {
   return (
     <ContainerImages>
       <HeroImage src={images[currentImage]} alt="product" />
+
       <Thumbnails
         currentImage={currentImage}
         setCurrentImage={setCurrentImage}

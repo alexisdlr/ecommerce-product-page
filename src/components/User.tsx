@@ -10,6 +10,10 @@ const UserImg = styled.img`
   &:hover {
     border: 1px solid #FF7E1B;
   }
+
+  @media (max-width: 768px) {
+    width: 30px;
+  }
 `
 const User = () => {
   return (

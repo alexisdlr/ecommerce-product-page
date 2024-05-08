@@ -26,6 +26,9 @@ const Button = styled.button`
     margin-right: 1rem;
     fill: #fff;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Container = styled.div`
@@ -53,6 +56,10 @@ const Container = styled.div`
       justify-content: center;
       align-items: center;
     }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 const AddToCart = () => {
