@@ -3,16 +3,19 @@ import styled from "styled-components";
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: .5rem;
 
   @media (max-width: 768px) {
     display: none;
   }
+  @media (min-width: 1281px) {
+    gap: 1rem;
+  }
 `;
 
 const Thumbnail = styled.img<{ isActive: boolean }>`
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   margin: 0 2px;
   cursor: pointer;
   border: ${({ isActive }) =>
@@ -23,6 +26,16 @@ const Thumbnail = styled.img<{ isActive: boolean }>`
   &:hover {
     opacity: 0.5;
   }
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media (min-width: 1281px) {
+    width: 80px;
+    height: 80px;
+  }
+
 `;
 const Thumbnails = ({
   currentImage,

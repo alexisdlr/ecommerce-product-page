@@ -9,7 +9,7 @@ const Container = styled(Wrapper)`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
+  margin-top: 3rem;
   gap: 0 4rem;
 
   @media (max-width: 768px) {
@@ -26,11 +26,22 @@ const HeroText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 4px;
+  gap: 10px;
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #69707d;
+    line-height: 1.5;
+
+    @media (min-width: 1281px) {
+      font-size: 16px;
+    }
+  }
 
   @media (max-width: 768px) {
     margin: 0;
-    text-align: left ;
+    text-align: left;
   }
 `;
 
@@ -46,13 +57,14 @@ const Title = styled.h1`
   color: #1d1c1e;
   margin: 0;
   line-height: 1;
-`;
 
-const P = styled.p`
-  font-size: 14px;
-  font-weight: 300;
-  color: #69707d;
-  line-height: 1.5;
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+  @media (min-width: 1281px) {
+    font-size: 50px;
+    margin-bottom: 1rem;
+  }
 `;
 
 const Hero = () => {
@@ -62,11 +74,11 @@ const Hero = () => {
       <HeroText>
         <Span>Sneaker Company</Span>
         <Title>Fall Limited Edition Sneakers</Title>
-        <P>
+        <p>
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
-        </P>
+        </p>
         <Price />
       </HeroText>
     </Container>

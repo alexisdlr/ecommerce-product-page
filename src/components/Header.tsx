@@ -6,7 +6,7 @@ import User from "./User";
 const StyledHeader = styled.header`
   width: 80%;
   margin: 0 auto;
-  max-height: 80px;
+  max-height: 85px;
   display: flex;
   align-items: center;
   border-bottom: 2px solid #E4E9F2;
@@ -50,6 +50,7 @@ const MenuList = styled.ul`
   list-style: none;
   gap: 1.5rem;
   align-items: center;
+  margin-top: 4px;
   @media (max-width: 768px) {
     display: none;
   }
@@ -64,7 +65,7 @@ const menuItems = ["Collections", "Men", "Women", "About", "Contact"];
 const Header = () => {
   return (
     <StyledHeader>
-      <Container>
+      <Container $gap="2rem">
         <Logo src={logoimg} alt="Logo sneakers" />
         <MenuList>
           {menuItems.map((item) => (

@@ -4,12 +4,15 @@ import Thumbnails from "./Thumbnails";
 import styled from "styled-components";
 
 const HeroImage = styled.img`
-  width: 400px;
+  width: 350px;
   height: auto;
   border-radius: 10px;
 
   @media (max-width: 768px) {
     display: none;
+  }
+  @media (min-width: 1281px) {
+    width: 450px;
   }
 `;
 
