@@ -7,7 +7,7 @@ import MobileHeader from "./components/MobileHeader";
 
 const Main = styled(Wrapper).attrs({ as: "main" })`
   @media (max-width: 768px) {
-    padding: 0;
+    padding: 0 1rem;
   }
 `;
 
@@ -15,7 +15,6 @@ function App() {
   return (
     <Main>
       <Header />
-      <MobileHeader />
       <Hero />
     </Main>
   );
