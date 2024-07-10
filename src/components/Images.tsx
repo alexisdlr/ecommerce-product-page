@@ -12,7 +12,7 @@ const HeroImage = styled.img`
     display: none;
   }
   @media (min-width: 1281px) {
-    width: 450px;
+    width: 500px;
   }
 `;
 

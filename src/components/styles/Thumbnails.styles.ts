@@ -31,8 +31,8 @@ export const Thumbnail = styled.img<{ isActive: boolean }>`
     height: 40px;
   }
   @media (min-width: 1281px) {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
   }
 
 `;
