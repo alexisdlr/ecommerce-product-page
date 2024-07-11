@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Wrapper } from "../Wrapper";
+
 export const Container = styled(Wrapper)`
   max-width: 1100px;
   display: flex;
@@ -11,7 +12,8 @@ export const Container = styled(Wrapper)`
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 2rem;
-    padding: 0;
+    padding: 0 10px;
+    margin: 0;
   }
 
   @media (min-width: 1281px) {
@@ -22,7 +24,6 @@ export const Container = styled(Wrapper)`
 
 export const HeroText = styled.div`
   max-width: 400px;
-  height: auto;
   margin-right: 2rem;
   align-self: center;
   display: flex;

@@ -9,7 +9,7 @@ import {
 
 const CartList = ({ open }: { open: boolean }) => {
   const { cart, removeItem } = useCartStore();
-  const isCartEmpty = cart.length === 0;
+  const isCartEmpty = cart === 0;
 
   return (
     <>
@@ -19,13 +19,11 @@ const CartList = ({ open }: { open: boolean }) => {
             <p>Cart</p>
           </WrapperTitle>
           <WrapperList>
-            {cart.length === 0 ? (
+            {isCartEmpty ? (
               <p>Cart is empty</p>
             ) : (
               <div>
-                {cart.map((item) => (
-                  <CartItem key={item} />
-                ))}
+                <CartItem />
               </div>
             )}
           </WrapperList>

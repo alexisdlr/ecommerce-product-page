@@ -71,6 +71,7 @@ export const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9;
 
   pointer-events: none;
 `;

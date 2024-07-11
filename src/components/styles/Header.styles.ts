@@ -8,11 +8,13 @@ export const StyledHeader = styled.header`
   align-items: center;
   border-bottom: 2px solid #e4e9f2;
   justify-content: space-between;
+  z-index: 19;
 
   @media (max-width: 768px) {
     width: 100%;
     max-height: 80px;
-    
+    height: 80px;
+    padding: 0 10px;
     button {
     background-color: transparent;
     border: none;

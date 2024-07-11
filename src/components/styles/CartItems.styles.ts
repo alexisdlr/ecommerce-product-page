@@ -5,7 +5,7 @@ export const ItemImg = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  margin: 0 1rem;
+  margin: 0;
   cursor: pointer;
   transition: 300ms ease-in-out;
   border: 1px solid transparent;
@@ -13,8 +13,8 @@ export const ItemImg = styled.img`
     border: 1px solid #FF7E1B;
   }
   @media (max-width: 768px) {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
   }
 `
 ItemImg.defaultProps = {
@@ -28,11 +28,18 @@ export const ContainerItem = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
+  gap: 10px;
   border-bottom: 1px solid #E2E2E2;
+
   @media (max-width: 768px) {
-    padding: 2rem 0;
+    padding: .5rem 0;
   }
 
+  .item-info {
+    display: flex;
+    gap: 10px;
+    align-items: center
+  }
   h3 {
     font-size: 14px;
     color: #1D2026;
@@ -44,5 +51,17 @@ export const ContainerItem = styled.div`
     color: #69707D;
     margin: 0;
     font-weight: 300;
+  }
+  span {
+    font-weight: bold;
+    color: #000;
+  }
+  .delete-icon {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: none;
   }
 `

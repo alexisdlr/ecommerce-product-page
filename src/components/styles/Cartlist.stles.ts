@@ -10,6 +10,11 @@ export const CartContainer = styled.div<{ $isCartEmpty: boolean }>`
   z-index: 10;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    right: 4px;
+    top: 60px;
+  }
 `;
 
 export const WrapperTitle = styled.div`
