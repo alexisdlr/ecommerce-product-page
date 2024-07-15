@@ -1,14 +1,14 @@
-import styled from "styled-components";
 import useCartStore from "../store/global";
 import CartItem from "./CartItem";
 import {
   CartContainer,
+  CheckoutButton,
   WrapperList,
   WrapperTitle,
 } from "./styles/Cartlist.stles";
 
 const CartList = ({ open }: { open: boolean }) => {
-  const { cart, removeItem } = useCartStore();
+  const { cart } = useCartStore();
   const isCartEmpty = cart === 0;
 
   return (
@@ -24,6 +24,9 @@ const CartList = ({ open }: { open: boolean }) => {
             ) : (
               <div>
                 <CartItem />
+                <CheckoutButton>
+                  Checkout
+                </CheckoutButton>
               </div>
             )}
           </WrapperList>

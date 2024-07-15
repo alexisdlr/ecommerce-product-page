@@ -7,6 +7,7 @@ type CartState = {
   items: number;
   addItem: () => void;
   removeItem: () => void;
+  resetCart: () => void;
 };
 
 const useCartStore = create<CartState>((set, get) => ({
@@ -29,6 +30,7 @@ const useCartStore = create<CartState>((set, get) => ({
       set((state) => ({ items: state.items - 1 }));
     }
   },
+  resetCart: () => set(() => ({ items: 0, cart: 0})),
 }));
 
 export default useCartStore;

@@ -3,7 +3,7 @@ import { ContainerItem, ItemImg } from "./styles/CartItems.styles";
 import deleteIcon from "../assets/images/icon-delete.svg";
 
 const CartItem = () => {
-  const { cart } = useCartStore();
+  const { cart, resetCart } = useCartStore();
 
   const price = 125.0;
   const total = price * cart;
@@ -18,12 +18,13 @@ const CartItem = () => {
           </p>
         </div>
       </div>
-      <button className="delete-icon">
+      <button className="delete-icon" onClick={() => resetCart()}>
         <img
           src={deleteIcon}
           alt="delete icon"
         />
       </button>
+      
     </ContainerItem>
   );
 };
