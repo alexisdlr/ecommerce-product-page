@@ -1,15 +1,15 @@
 import { images } from "../utils";
 import { Grid, Thumbnail } from "./styles/Thumbnails.styles";
 
-const Thumbnails = ({
-  currentImage,
-  setCurrentImage,
-}: {
+interface ThumbnailsProps {
   currentImage: number;
   setCurrentImage: (index: number) => void;
-}) => {
+  gap?: string;
+}
+
+const Thumbnails = ({currentImage, setCurrentImage, gap}: ThumbnailsProps) => {
   return (
-    <Grid>
+    <Grid spaceGap={gap}>
       {images.map((image, index) => (
         <Thumbnail
           key={index}

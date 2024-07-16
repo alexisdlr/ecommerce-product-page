@@ -1,8 +1,10 @@
 import styled from "styled-components";
-export const Grid = styled.div`
+export const Grid = styled.div<{ spaceGap?: string }>`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: .5rem;
+  gap: ${({ spaceGap }) => spaceGap || "0.5rem"};
+  justify-items: center; 
+
 
   @media (max-width: 768px) {
     display: none;
