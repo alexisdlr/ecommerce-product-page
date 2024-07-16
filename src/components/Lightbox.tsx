@@ -8,43 +8,44 @@ import {
 } from "./styles/Lightbox.styles";
 import Thumbnails from "./Thumbnails";
 import closeIcon from "../assets/images/icon-close.svg";
+import { useEffect, useState } from "react";
 
 const Lightbox = () => {
+  const [current, setCurrent] = useState(0);
   const { open, image, setImage, toggle } = useLightboxStore();
   const currentIndex = images.indexOf(image);
 
-  const setCurrentImage = () => {
-    const imageIndex = images
-      .map((image) => {
-        return image;
-      })
-      .filter((image) => {
-        return image === image;
-      });
-    setImage(imageIndex[0]);
+  useEffect(() => {
+    setCurrent(currentIndex);
+  }, []);
+
+  const setCurrentImage = (index: number) => {
+    setCurrent(index);
+
+    setImage(images[index]);
   };
+
   const onClose = () => {
     toggle();
     setImage("");
   };
+
+  if (!open) return null;
+
   return (
-    <>
-      {open && (
-        <LightboxContainer>
-          <ContainerImages>
-            <Image src={image} alt="product" />
-            <Thumbnails
-              gap="2px"
-              currentImage={currentIndex}
-              setCurrentImage={setCurrentImage}
-            />
-            <CloseLightbox onClick={() => onClose()}>
-              <img src={closeIcon} alt="close" />
-            </CloseLightbox>
-          </ContainerImages>
-        </LightboxContainer>
-      )}
-    </>
+    <LightboxContainer>
+      <ContainerImages>
+        <Image src={image} alt="product" />
+        <Thumbnails
+          gap="2px"
+          currentImage={current}
+          setCurrentImage={setCurrentImage}
+        />
+        <CloseLightbox onClick={() => onClose()}>
+          <img src={closeIcon} alt="close" />
+        </CloseLightbox>
+      </ContainerImages>
+    </LightboxContainer>
   );
 };
 

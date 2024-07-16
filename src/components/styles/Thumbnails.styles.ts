@@ -1,8 +1,8 @@
 import styled from "styled-components";
-export const Grid = styled.div<{ spaceGap?: string }>`
+export const Grid = styled.div<{ spacegap?: string }>`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: ${({ spaceGap }) => spaceGap || "0.5rem"};
+  gap: ${({ spacegap }) => spacegap || "0.5rem"};
   justify-items: center; 
 
 
@@ -14,15 +14,15 @@ export const Grid = styled.div<{ spaceGap?: string }>`
   }
 `;
 
-export const Thumbnail = styled.img<{ isActive: boolean }>`
+export const Thumbnail = styled.img<{ $active: boolean }>`
   width: 60px;
   height: 60px;
   margin: 0 2px;
   cursor: pointer;
-  border: ${({ isActive }) =>
-    isActive ? "1px solid #ff7e1b" : "1px solid transparent"};
+  border: ${({ $active }) => 
+    $active ? '1px solid #ff7e1b' : '1px solid transparent'};
   border-radius: 8px;
-  opacity: ${({ isActive }) => (isActive ? .7 : 1)};
+  opacity: ${({ $active }) => ($active ? 0.5 : 1)};
   transition: 300ms ease-in;
   &:hover {
     opacity: 0.5;
@@ -32,9 +32,10 @@ export const Thumbnail = styled.img<{ isActive: boolean }>`
     width: 40px;
     height: 40px;
   }
+
   @media (min-width: 1281px) {
     width: 100px;
     height: 100px;
   }
-
 `;
+

@@ -30,7 +30,6 @@ const Images = () => {
   const { toggle, setImage } = useLightboxStore();
   const openLightbox = () => {
     setImage(images[currentImage]);
-    console.log(images[currentImage]);
     toggle();
   };
 

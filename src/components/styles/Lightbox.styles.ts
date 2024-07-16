@@ -46,7 +46,7 @@ export const Image = styled.img`
 
 export const CloseLightbox = styled.button`
   position: absolute;
-  top: -25px;
+  top: -35px;
   right: 5px;
   background-color: transparent;
   color: white;

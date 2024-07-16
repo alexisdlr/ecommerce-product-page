@@ -8,14 +8,15 @@ interface ThumbnailsProps {
 }
 
 const Thumbnails = ({currentImage, setCurrentImage, gap}: ThumbnailsProps) => {
+
   return (
-    <Grid spaceGap={gap}>
+    <Grid spacegap={gap}>
       {images.map((image, index) => (
         <Thumbnail
-          key={index}
+          key={image}
           src={image}
           alt="product"
-          isActive={currentImage === index}
+          $active={currentImage === index}
           onClick={() => setCurrentImage(index)}
         />
       ))}
