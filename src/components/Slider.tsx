@@ -1,6 +1,6 @@
-import { images } from "../utils"
+import { images } from "../utils";
 
-import styled from "styled-components"
+import styled from "styled-components";
 
 const ContainerSlider = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const ContainerSlider = styled.div`
   .right {
     right: 10px;
   }
-`
+`;
 
 const SliderImage = styled.img`
   width: 100%;
@@ -35,14 +35,23 @@ const SliderImage = styled.img`
   @media (min-width: 768px) {
     display: none;
   }
+`;
 
-`
+const Button = ({
+  className,
+  children,
+}: {
+  className: string;
+  children: React.ReactNode;
+}) => {
+  return <button className={className}>{children}</button>;
+};
 
 const Slider = () => {
   return (
     <ContainerSlider>
       <SliderImage src={images[0]} alt="product" />
-      <button className="left">
+      <Button className="left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -51,8 +60,9 @@ const Slider = () => {
         >
           <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
         </svg>
-      </button>
-      <button className="right">
+      </Button>
+
+      <Button className="right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -61,9 +71,9 @@ const Slider = () => {
         >
           <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
         </svg>
-      </button>
+      </Button>
     </ContainerSlider>
-  )
-}
+  );
+};
 
-export default Slider
+export default Slider;

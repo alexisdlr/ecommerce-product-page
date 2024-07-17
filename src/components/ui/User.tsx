@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import userAvatarSrc from '../assets/images/image-avatar.png'
+import userAvatarSrc from '../../assets/images/image-avatar.png'
 
 const UserImg = styled.img`
   width: 40px;

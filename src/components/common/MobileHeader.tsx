@@ -1,18 +1,18 @@
 import { useState } from "react";
-import { menuItems } from "../utils";
-import Cart from "./Cart";
-import User from "./User";
-import Logo from "./shared/Logo";
-import menuIcon from "../assets/images/icon-menu.svg";
-import closeIcon from "../assets/images/icon-close.svg";
+import { menuItems } from "../../utils";
+import Cart from "../cart/Cart";
+import User from "../ui/User";
+import Logo from "../shared/Logo";
+import menuIcon from "../../assets/images/icon-menu.svg";
+import closeIcon from "../../assets/images/icon-close-black.svg";
 import {
   Container,
   MenuButton,
   MenuItem,
   MenuList,
   Background,
-} from "./styles/MobileHeader.styles";
-import { Link } from "./styles/Header.styles";
+} from "../styles/MobileHeader.styles";
+import { Link } from "../styles/Header.styles";
 
 const MobileHeader = () => {
   const [open, setOpen] = useState(false);

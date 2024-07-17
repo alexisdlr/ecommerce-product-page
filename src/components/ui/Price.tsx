@@ -1,5 +1,5 @@
-import AddToCart from "./AddToCart";
-import { Container, Discount, Span } from "./styles/Prices.styles";
+import AddToCart from "../cart/AddToCart";
+import { Container, Discount, Span } from "../styles/Prices.styles";
 
 const Price = () => {
   return (

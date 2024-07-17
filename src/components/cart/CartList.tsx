@@ -1,11 +1,11 @@
-import useCartStore from "../store/global";
+import useCartStore from "../../store/global";
 import CartItem from "./CartItem";
 import {
   CartContainer,
   CheckoutButton,
   WrapperList,
   WrapperTitle,
-} from "./styles/Cartlist.stles";
+} from "../styles/Cartlist.stles";
 
 const CartList = ({ open }: { open: boolean }) => {
   const { cart } = useCartStore();

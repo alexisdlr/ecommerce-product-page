@@ -1,7 +1,7 @@
-import logoimg from "../assets/images/logo.svg";
-import Cart from "./Cart";
+import logoimg from "../../assets/images/logo.svg";
+import Cart from "../cart/Cart";
 import MobileHeader from "./MobileHeader";
-import User from "./User";
+import User from "../ui/User";
 import {
   Container,
   Link,
@@ -9,7 +9,7 @@ import {
   MenuItem,
   MenuList,
   StyledHeader,
-} from "./styles/Header.styles";
+} from "../styles/Header.styles";
 
 const menuItems = ["Collections", "Men", "Women", "About", "Contact"];
 

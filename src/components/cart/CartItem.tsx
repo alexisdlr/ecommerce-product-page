@@ -1,6 +1,6 @@
-import useCartStore from "../store/global";
-import { ContainerItem, ItemImg } from "./styles/CartItems.styles";
-import deleteIcon from "../assets/images/icon-delete.svg";
+import useCartStore from "../../store/global";
+import { ContainerItem, ItemImg } from "../styles/CartItems.styles";
+import deleteIcon from "../../assets/images/icon-delete.svg";
 
 const CartItem = () => {
   const { cart, resetCart } = useCartStore();

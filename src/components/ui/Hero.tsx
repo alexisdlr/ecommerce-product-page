@@ -1,8 +1,8 @@
-import Images from "./Images";
-import Lightbox from "./Lightbox";
+import Images from "../Images";
+import Lightbox from "../Lightbox";
 import Price from "./Price";
-import Slider from "./Slider";
-import { Container, HeroText, Span, Title } from "./styles/Hero.styles";
+import Slider from "../Slider";
+import { Container, HeroText, Span, Title } from "../styles/Hero.styles";
 
 const Hero = () => {
   return (

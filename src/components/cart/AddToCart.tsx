@@ -1,8 +1,8 @@
-import cartIcon from "../assets/images/cart-white.svg";
-import plus from "../assets/images/icon-plus.svg";
-import minus from "../assets/images/icon-minus.svg";
-import useCartStore from "../store/global";
-import { Button, Container } from "./styles/AddToCart.styles";
+import cartIcon from "../../assets/images/cart-white.svg";
+import plus from "../../assets/images/icon-plus.svg";
+import minus from "../../assets/images/icon-minus.svg";
+import useCartStore from "../../store/global";
+import { Button, Container } from "../styles/AddToCart.styles";
 
 const AddToCart = () => {
   const { items, addItem, removeItem, setCart } = useCartStore();

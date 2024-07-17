@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import iconSvg from "../assets/images/icon-cart.svg";
-import useCartStore from "../store/global";
+import iconSvg from "../../assets/images/icon-cart.svg";
+import useCartStore from "../../store/global";
 import CartList from "./CartList";
 
 const IconCart = styled.img`
